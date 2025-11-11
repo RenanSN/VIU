@@ -1,0 +1,10 @@
+# Arquivo de configuração do Git para ignorar arquivos desnecessários
+
+# Dependências
+node_modules
+
+# Arquivo de produção compilado
+dist
+
+# Variáveis de ambiente
+.env

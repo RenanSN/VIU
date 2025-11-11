@@ -1,0 +1,96 @@
+/* components/GroupCard.module.css */
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  border: 1px solid var(--border); /* MUDOU */
+  background-color: var(--card); /* MUDOU */
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.cardBody {
+  flex: 1;
+  padding: 1rem;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--foreground); /* MUDOU */
+}
+
+.cardTitle a {
+  color: inherit; /* Garante que o link herde a cor do título */
+}
+
+.cardDate {
+  font-size: 0.875rem;
+  color: var(--foreground); /* MUDOU */
+  opacity: 0.7;
+  margin-bottom: 1rem;
+}
+
+.shareCode {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 6px;
+  background-color: var(--background); /* MUDOU */
+  border: 1px solid var(--border); /* ADICIONEI */
+  font-size: 0.875rem;
+}
+
+.shareCode span {
+  color: var(--foreground); /* MUDOU */
+  opacity: 0.8;
+}
+.shareCode strong {
+  font-family: monospace;
+  color: var(--foreground); /* MUDOU */
+}
+
+.cardFooter {
+  display: flex;
+  border-top: 1px solid var(--border); /* MUDOU */
+}
+
+.footerButton {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  font-size: 0.875rem;
+  background: none;
+  transition: background-color 0.2s;
+}
+
+.footerButton:not(:first-child) {
+  border-left: 1px solid var(--border); /* MUDOU */
+}
+
+.copyButton {
+  color: var(--primary); /* MUDOU */
+}
+.copyButton:hover {
+  background-color: var(--secondary); /* MUDOU */
+}
+
+.manageButton {
+  color: var(--secondary-foreground); /* MUDOU */
+}
+.manageButton:hover {
+  background-color: var(--secondary); /* MUDOU */
+}
+
+.deleteButton {
+  color: var(--danger); /* MUDOU */
+}
+.deleteButton:hover {
+  background-color: var(--danger); /* MUDOU */
+  color: var(--danger-foreground); /* MUDOU */
+  opacity: 0.8;
+}

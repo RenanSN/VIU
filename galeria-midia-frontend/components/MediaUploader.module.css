@@ -1,0 +1,71 @@
+/* components/MediaUploader.module.css */
+.uploaderContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  border-radius: 8px;
+  border: 2px dashed var(--border); /* MUDOU */
+  background-color: var(--card); /* MUDOU */
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.dropzone.dragActive {
+  border-color: var(--primary); /* MUDOU */
+  background-color: var(--secondary); /* MUDOU */
+}
+
+.dropzoneIcon {
+  color: var(--foreground); /* MUDOU */
+  opacity: 0.5;
+}
+
+.dropzoneText {
+  margin-top: 0.5rem;
+  color: var(--foreground); /* MUDOU */
+  opacity: 0.8;
+}
+
+.dropzoneHint {
+  font-size: 0.75rem;
+  color: var(--foreground); /* MUDOU */
+  opacity: 0.6;
+}
+
+.fileList {
+  font-size: 0.875rem;
+  color: var(--foreground); /* MUDOU */
+}
+.fileList h4 {
+  font-weight: 600;
+}
+.fileList ul {
+  list-style-position: inside;
+  list-style-type: disc;
+}
+
+.uploadButton {
+  align-self: flex-start;
+  /* (O verde do botão de upload é uma cor de 'sucesso', podemos mantê-la) */
+  background-color: #16a34a;
+  color: white;
+  font-weight: 600;
+}
+
+.uploadButton:hover {
+  background-color: #15803d;
+}
+
+.uploadButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

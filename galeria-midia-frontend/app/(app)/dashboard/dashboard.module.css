@@ -1,0 +1,54 @@
+/* app/(app)/dashboard/dashboard.module.css */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.title {
+  font-size: 1.875rem; /* 30px */
+  font-weight: 700;
+  color: var(--foreground); /* MUDOU */
+}
+
+.createButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--primary); /* MUDOU */
+  color: var(--primary-foreground); /* MUDOU */
+  font-weight: 600;
+}
+
+.createButton:hover {
+  background-color: var(--primary-hover); /* MUDOU */
+}
+
+.galleryContainer {
+  margin-top: 2rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+/* ... (as media queries continuam as mesmas) ... */
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1280px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

@@ -1,0 +1,238 @@
+/* app/home.module.css */
+
+.container {
+  min-height: 100vh;
+  background-color: #1a1a1a; /* Fundo escuro */
+  color: #f0f0f0; /* Texto claro */
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgba(26, 26, 26, 0.8); /* Fundo semi-transparente */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logoImage {
+  height: 2.2rem; /* Ajuste a altura do logo conforme necessário */
+  width: auto; /* Mantém a proporção */
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #f0f0f0;
+  text-decoration: none;
+}
+
+.navButtons a {
+  background-color: #007bff; /* Azul padrão */
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.navButtons a:hover {
+  background-color: #0056b3; /* Azul mais escuro */
+}
+
+.navButtons a.register {
+  background-color: #28a745; /* Verde para cadastrar */
+}
+
+.navButtons a.register:hover {
+  background-color: #218838;
+}
+
+/* Hero Section (Seção Principal com a imagem de fundo) */
+.heroSection {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/home-background.jpg');
+  background-size: cover;
+  background-position: center;
+  
+  padding: 8rem 2rem 4rem; 
+  text-align: center;
+  min-height: 70vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  
+  position: relative;
+}
+
+.heroSection::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* Overlay escuro */
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heroSmallText {
+  background-color: rgba(30, 144, 255, 0.2); /* Azul com transparência */
+  color: #add8e6; /* Azul claro para o texto */
+  padding: 0.5rem 1.5rem; /* Mais preenchimento para parecer uma cápsula */
+  border-radius: 9999px; /* Bordas bem arredondadas (cápsula) */
+  display: inline-block; /* Para o padding funcionar e ter fundo */
+  margin-bottom: 1.5rem; /* Um pouco mais de espaço abaixo */
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  
+  /* Removemos o cursor de ponteiro e adicionamos um leve box-shadow para profundidade */
+  cursor: default; /* Garante que não pareça clicável */
+  box-shadow: 0 2px 8px rgba(30, 144, 255, 0.2); /* Sombra sutil azulada */
+  border: 1px solid rgba(30, 144, 255, 0.4); /* Borda sutil para definir a forma */
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.highlight {
+  color: #007bff; /* Destaque azul */
+}
+
+.heroDescription {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.tvAccessButton {
+  background-color: #dc3545; /* Vermelho para "Acessar na TV" */
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.tvAccessButton:hover {
+  background-color: #c82333; /* Vermelho mais escuro */
+}
+
+/* How It Works Section */
+.howItWorksSection {
+  background-color: #1a1a1a;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.howItWorksTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+  color: #f0f0f0;
+}
+
+.stepsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.stepCard {
+  background-color: var(--card);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  flex: 1;
+  min-width: 280px;
+  max-width: 380px;
+  margin: 1rem;
+  text-align: center;
+}
+
+.stepIcon {
+  /* Adicionamos tamanho para SVG */
+  width: 3rem;  /* 48px */
+  height: 3rem; /* 48px */
+  stroke-width: 2; /* Define a espessura da linha do ícone */
+
+  color: var(--primary); /* Mantém a cor azul */
+  margin-bottom: 1rem;
+}
+
+.stepNumber {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #f0f0f0;
+}
+
+.stepDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #cccccc;
+}
+
+/* Footer (Opcional - se for universal, fica no layout.tsx) */
+.footer {
+  background-color: #111111;
+  color: #aaaaaa;
+  text-align: center;
+  padding: 2rem;
+  margin-top: auto; /* Empurra o footer para baixo */
+}
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .navButtons {
+    margin-top: 1rem;
+  }
+
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .heroDescription {
+    font-size: 1rem;
+  }
+
+  .tvAccessButton {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .howItWorksTitle {
+    font-size: 2rem;
+  }
+}

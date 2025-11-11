@@ -1,0 +1,95 @@
+/* components/MediaGallery.module.css */
+
+.emptyText {
+  color: var(--foreground); /* MUDOU */
+  opacity: 0.7;
+}
+
+/* ... (o .grid e suas media queries não mudam) ... */
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (min-width: 640px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 768px) { .grid { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 1024px) { .grid { grid-template-columns: repeat(5, 1fr); } }
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid var(--border); /* MUDOU */
+  background-color: var(--secondary); /* MUDOU */
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.mediaContainer {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+}
+
+.videoPlaceholder {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: #374151; /* Mantém escuro para contraste */
+  color: white;
+}
+
+.image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.cardFooter {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /* Fundo semi-transparente que funciona nos dois modos */
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(4px);
+  padding: 0.5rem;
+  border-top: 1px solid var(--border); /* MUDOU */
+}
+
+/* No modo escuro, o 'footer' fica escuro */
+.dark .cardFooter {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.fileName {
+  font-size: 0.75rem;
+  font-weight: 500;
+  /* A cor do texto do footer é herdada (foreground) */
+  /* e deve contrastar com o 'background-color' acima */
+  color: #111827; 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dark .fileName {
+  color: #ffffff;
+}
+
+.deleteButton {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.25rem;
+  z-index: 10;
+  border-radius: 99px;
+  background-color: var(--danger); /* MUDOU */
+  padding: 0.375rem;
+  color: var(--danger-foreground); /* MUDOU */
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.card:hover .deleteButton {
+  opacity: 1;
+}

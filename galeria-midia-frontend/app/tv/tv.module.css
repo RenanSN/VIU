@@ -1,0 +1,141 @@
+/* app/tv/tv.module.css */
+/* Esta página também força o fundo escuro */
+
+.formContainer {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--dark-background); /* MUDOU */
+  padding: 1rem;
+}
+
+.pageHeader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  z-index: 10;
+}
+.pageLogo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--dark-foreground); /* MUDOU */
+  text-decoration: none;
+}
+.logoImage {
+  height: 2.2rem; /* Ajuste a altura do logo conforme necessário */
+  width: auto; /* Mantém a proporção */
+}
+
+.formCard {
+  width: 100%;
+  max-width: 28rem;
+  background-color: #1f2937; /* Mantém (é um cinza escuro específico) */
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.formTitle {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--dark-foreground); /* MUDOU */
+  margin-bottom: 1.5rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border); /* MUDOU */
+  background-color: #374151; /* Mantém */
+  color: var(--dark-foreground); /* MUDOU */
+  border-radius: 6px;
+  font-size: 1.25rem;
+  text-align: center;
+  font-family: monospace;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.submitButton {
+  width: 100%;
+  background-color: var(--primary); /* MUDOU */
+  color: var(--primary-foreground); /* MUDOU */
+  font-weight: 600;
+  font-size: 1rem;
+}
+.submitButton:disabled { opacity: 0.5; }
+.submitButton:hover {
+  background-color: var(--primary-hover); /* MUDOU */
+}
+
+.errorText {
+  color: var(--danger); /* MUDOU */
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* --- Estado 2: Slideshow (Novo) --- */
+
+/* O contêiner principal do slideshow */
+.slideshowContainer {
+  position: fixed;
+  inset: 0;
+  background-color: #000000;
+  overflow: hidden;
+}
+
+/* Cada slide */
+.slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0; /* Começa invisível */
+  transition: opacity 1.5s ease-in-out; /* Animação de fade */
+}
+
+/* O slide que está ativo */
+.slideActive {
+  opacity: 1; /* Fica visível */
+  z-index: 1;
+}
+
+/* A mídia dentro do slide (imagem ou vídeo) */
+.media {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* 'Contain' é melhor que 'cover' para slideshow */
+}
+
+/* O nome do arquivo (opcional) */
+.mediaName {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  z-index: 2; /* Fica acima do slide */
+}
+
+.pageHeader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  z-index: 10; /* Garante que fique acima do form */
+}
+
+.pageLogo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #f0f0f0; /* Cor clara para o fundo escuro */
+  text-decoration: none;
+}

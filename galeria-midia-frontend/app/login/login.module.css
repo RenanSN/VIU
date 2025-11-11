@@ -1,0 +1,117 @@
+/* app/login/login.module.css */
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background); /* MUDOU */
+}
+
+/* Header para voltar (já usa cores herdadas, está OK) */
+.pageHeader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+}
+.pageLogo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--foreground); /* MUDOU */
+  text-decoration: none;
+}
+.logoImage {
+  height: 2.2rem; /* Ajuste a altura do logo conforme necessário */
+  width: auto; /* Mantém a proporção */
+}
+
+/* Card de Login */
+.card {
+  width: 100%;
+  max-width: 420px;
+  background-color: var(--card); /* MUDOU */
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border); /* MUDOU */
+}
+
+.title {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--foreground); /* MUDOU */
+}
+
+.form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--foreground); /* MUDOU */
+}
+
+.form input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border); /* MUDOU */
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  background-color: var(--background); /* MUDOU */
+  color: var(--foreground); /* MUDOU */
+}
+
+.button {
+  width: 100%;
+  background-color: var(--primary); /* MUDOU */
+  color: var(--primary-foreground); /* MUDOU */
+  font-weight: 600;
+}
+
+.button:hover {
+  background-color: var(--primary-hover); /* MUDOU */
+}
+.button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+  color: var(--foreground); /* MUDOU */
+  font-size: 0.875rem;
+}
+.divider::before,
+.divider::after {
+  content: "";
+  flex-grow: 1;
+  border-bottom: 1px solid var(--border); /* MUDOU */
+}
+.divider span { padding: 0 1rem; }
+
+.oauthButton {
+  width: 100%;
+  background-color: var(--secondary); /* MUDOU */
+  color: var(--secondary-foreground); /* MUDOU */
+  font-weight: 600;
+  border: 1px solid var(--border); /* MUDOU */
+}
+
+.oauthButton:hover {
+  background-color: var(--secondary-hover); /* MUDOU */
+}
+
+.toggleForm {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+}
+.toggleForm button {
+  background: none;
+  color: var(--primary); /* MUDOU */
+  font-weight: 600;
+  padding: 0.25rem;
+}

@@ -1,0 +1,95 @@
+/* components/CreateGroupModal.module.css */
+.dialog {
+  position: relative;
+  z-index: 50;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Fica escuro nos dois modos */
+}
+
+.panelContainer {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.panel {
+  width: 100%;
+  max-width: 28rem; /* 448px */
+  border-radius: 8px;
+  background-color: var(--card); /* MUDOU */
+  border: 1px solid var(--border); /* MUDOU */
+  padding: 1.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--foreground); /* MUDOU */
+}
+
+.description {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--foreground); /* MUDOU */
+  opacity: 0.8;
+}
+
+.form {
+  margin-top: 1rem;
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--foreground); /* MUDOU */
+}
+
+.input {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid var(--border); /* MUDOU */
+  background-color: var(--background); /* MUDOU */
+  color: var(--foreground); /* MUDOU */
+  padding: 0.5rem 0.75rem;
+}
+
+.buttonGroup {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+.cancelButton {
+  border: 1px solid var(--border); /* MUDOU */
+  background-color: var(--secondary); /* MUDOU */
+  color: var(--secondary-foreground); /* MUDOU */
+  font-size: 0.875rem;
+}
+.cancelButton:hover {
+  background-color: var(--secondary-hover); /* MUDOU */
+}
+
+.submitButton {
+  background-color: var(--primary); /* MUDOU */
+  color: var(--primary-foreground); /* MUDOU */
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.submitButton:disabled {
+  opacity: 0.5;
+}
+.submitButton:hover {
+  background-color: var(--primary-hover); /* MUDOU */
+}
